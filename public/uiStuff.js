@@ -32,6 +32,7 @@ document.querySelector('.name-form').addEventListener('submit', (e) => {
 });
 
 document.querySelector('.start-game').addEventListener('click', (e) => {
+  if (!window.init) return;
   //hide the start modal
   spawnModal.hide();
   //show the hiddenOnStart elements

@@ -1,6 +1,6 @@
 //connect to the socket server!
 
-const URL = window.URL || 'http://localhost:9000';
+const URL = 'https://socketio-js-agario-clone.onrender.com';
 const socket = io.connect(URL);
 
 window.init = async () => {
