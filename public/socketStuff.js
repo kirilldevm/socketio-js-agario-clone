@@ -1,5 +1,7 @@
 //connect to the socket server!
-const socket = io.connect('http://localhost:9000');
+
+const URL = import.meta.env.URL || 'http://localhost:9000';
+const socket = io.connect(URL);
 
 const init = async () => {
   //init is called inside of start-game click listener

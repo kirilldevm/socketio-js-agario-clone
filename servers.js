@@ -3,9 +3,11 @@ const app = express();
 app.use(express.static(__dirname + '/public'));
 const expressServer = app.listen(9000);
 const socketio = require('socket.io');
+
+const URL = process.env.URL || 'http://localhost:9000';
 const io = socketio(expressServer, {
   cors: {
-    origin: ['http://localhost:3030'],
+    origin: [URL],
     credentials: true,
   },
 });
