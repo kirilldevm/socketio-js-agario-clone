@@ -1,9 +1,9 @@
 //connect to the socket server!
 
-const URL = import.meta.env.URL || 'http://localhost:9000';
+const URL = window.URL || 'http://localhost:9000';
 const socket = io.connect(URL);
 
-const init = async () => {
+window.init = async () => {
   //init is called inside of start-game click listener
   const initData = await socket.emitWithAck('init', {
     playerName: player.name,
